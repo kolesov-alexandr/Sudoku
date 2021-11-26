@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Судоку</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>180</y>
+      <width>371</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="gameLabel">
+       <property name="font">
+        <font>
+         <pointsize>36</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>СУДОКУ</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="newGameButton">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Новая игра</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="continueGameButton">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Продолжить игру</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="nameLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="accountMenu">
+    <property name="title">
+     <string>Аккаунт</string>
+    </property>
+    <addaction name="changePasswordAction"/>
+    <addaction name="quitAccountAction"/>
+    <addaction name="deleteAccountAction"/>
+   </widget>
+   <widget class="QMenu" name="helpMenu">
+    <property name="title">
+     <string>О программе</string>
+    </property>
+    <addaction name="helpAction"/>
+   </widget>
+   <addaction name="accountMenu"/>
+   <addaction name="helpMenu"/>
+  </widget>
+  <action name="changePasswordAction">
+   <property name="text">
+    <string>Изменить пароль</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Q</string>
+   </property>
+  </action>
+  <action name="quitAccountAction">
+   <property name="text">
+    <string>Выйти из аккаунта</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+X</string>
+   </property>
+  </action>
+  <action name="deleteAccountAction">
+   <property name="text">
+    <string>Удалить аккаунт</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Del</string>
+   </property>
+  </action>
+  <action name="helpAction">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+F1</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
