@@ -43,7 +43,7 @@ class MyWidget(QWidget, Ui_Form):
                 WHERE id = (SELECT id_field FROM players WHERE is_active = 1)""").fetchone()
             difficulty = DIFFICULTIES[cur.execute("""SELECT title FROM difficulties WHERE id = (
                 SELECT id_difficulty FROM fields WHERE id_difficulty = ?)""", (
-                int(id_field[0]),),).fetchone()[0]]
+                int(id_field[0]),)).fetchone()[0]]
             con.close()
             number = id_field[1].replace(difficulty + "/", "")
             number = int(number[:number.index(".")])
