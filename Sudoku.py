@@ -118,7 +118,6 @@ class MyWidget(QWidget, Ui_Form):
             self.field[index // SIDE][index % SIDE] = number
 
     def closeEvent(self, event):
-        self.timer.stop()
         con = sqlite3.connect("sudoku.sqlite")
         cur = con.cursor()
         active_game = cur.execute("""SELECT is_game FROM players WHERE is_active = 1""").fetchone()
